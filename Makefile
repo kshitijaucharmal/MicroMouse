@@ -1,6 +1,6 @@
 # Compiler options
 CXX = g++
-CXXFLAGS = -Wall -Werror -Wextra -g
+CXXFLAGS = -Wall -g
 LDFLAGS = -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
  
 # Source files

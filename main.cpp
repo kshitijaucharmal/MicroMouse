@@ -11,9 +11,9 @@ const int height = 400;
 const int gridSize = 8;
 const int cellSize = width / gridSize;
 
-int grid[gridSize][gridSize][4]; // N S E W
+int grid[gridSize][gridSize][5]; // N S E W, U
 
-int direction_map[4][2] = {
+int mapping[4][2] = {
     {0, 1},
     {0, -1},
     {1, 0},
@@ -27,7 +27,7 @@ void setup(){
     // Make a grid with walls on wall sides
     for(int i = 0; i < gridSize; i++){
         for(int j = 0; j < gridSize; j++){
-            for(int k = 0; k < 4; k++){
+            for(int k = 0; k < 5; k++){
                 //if(rand() % 100 < 50)
                     grid[i][j][k] = 1;
             }
@@ -35,12 +35,20 @@ void setup(){
     }
 }
 
-void carve(int x, int y, int grid[gridSize][gridSize][4]){
+void carve(int x, int y, int grid[gridSize][gridSize][5]){
     int *walls = grid[x][y];
 
-    int direction = rand() % 4;
+    for(int i = 0; i < 4; i++){
+        // Finf next walls
+        int nx, ny;
+        nx = x + mapping[i][0];
+        ny = y + mapping[i][1];
+        int *nextWalls = grid[nx][ny];
+        
+        if (nx < 0 || nx > gridSize - 1 || ny < 0 || ny > gridSize-1 || grid[nx][ny][4] == 0){
 
-    walls = grid[x + direction_map[direction][0]][y + direction_map[direction][1]];
+        }
+    }
 
 }
 

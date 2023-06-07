@@ -8,10 +8,10 @@ I have acquired an interest in developing an online version for the same.
 This project aims to provide a virtual maze with an local API to access the maze, 
 and the contest will be to make a standalone mouse programs, that can use various techniques
 such as:
-1. Flood fill algorithm
-2. Q Learning
-3. NEAT Algorithm
-4. A* Path Finding Algorithm
+1. [Flood fill algorithm](https://en.wikipedia.org/wiki/Flood_fill)
+2. [Q Learning](https://en.wikipedia.org/wiki/Q-learning)
+3. [NEAT Algorithm](https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies)
+4. [A* Path Finding Algorithm](https://en.wikipedia.org/wiki/A*_search_algorithm)
 
 And many more such algorithms, to get their mouse to the finish line as fast as possible.
 
